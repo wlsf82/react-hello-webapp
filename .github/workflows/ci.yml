@@ -10,6 +10,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Write the .env file 📝
+        # use quotes around the secret, as its value
+        # is simply inserted as a string into the command
+        run: |
+          echo '${{ secrets.BASENAME }}' > .env
       - name: Run cypress tests 🧪
         uses: cypress-io/github-action@v6
         with:
