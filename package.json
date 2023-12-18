@@ -11,7 +11,8 @@
     "build": "webpack --config webpack.prod.js",
     "deploy": "node deploy-to-github.js",
     "cy:open": "cypress open",
-    "test": "cypress run"
+    "test": "cypress run",
+    "test:cloud": "cypress run --record"
   },
   "author": {
     "name": "Alejandro Sanchez",

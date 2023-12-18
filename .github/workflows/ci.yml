@@ -20,4 +20,6 @@ jobs:
         with:
           start: npm start
           wait-on: "http://localhost:3000"
-          command: npm t
+          command: npm run test:cloud
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
